@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "primaryPage",
+  "usingComponents": {
+    "uni-easyinput": "../../node-modules/@dcloudio/uni-ui/lib/uni-easyinput/uni-easyinput"
+  }
+}

@@ -1,0 +1,1 @@
+<view style="width:50vw"><uni-easyinput wx:if="{{b}}" class="fixed-style-input" u-i="3529d600-0" bind:__l="__l" bindupdateModelValue="{{a}}" u-p="{{b}}"/></view>

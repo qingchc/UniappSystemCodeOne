@@ -1,0 +1,15 @@
+
+.fixed-style-input {
+  border: 1px solid #dcdfe6 !important;
+  border-radius: 4px !important;
+.uni-easyinput__content {
+    padding-right: 28px !important;
+}
+.uni-easyinput__clear-icon {
+    right: 8px !important;
+    color: #c0c4cc !important;
+&:hover {
+      color: #909399 !important;
+}
+}
+}

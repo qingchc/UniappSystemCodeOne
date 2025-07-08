@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-3000020210521001",
+    "axios": "^1.10.0"
+  },
+  "devDependencies": {
+    "@dcloudio/uni-ui": "^1.5.8",
+    "unplugin-auto-import": "^19.3.0"
+  }
+}
