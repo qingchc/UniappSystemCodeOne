@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--
+           typeAliases:起别名
+           这样在将来开发的时候：sql语句的resultType就不再需要使用包名+类名格式
+           方便代码书写
+    -->
+    <typeAliases>
+        <package name="com.cqcqya.application.pojo"/>
+    </typeAliases>
+    <!--
+        environments：环境
+        在将来的开发中，我们可能有多各开发环境
+        比如说测试的时候用test库
+        正式部署的时候用公司数据库
+        那怎么进行切换就需要更改default
+    -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!-- 数据库连接信息 -->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///cq?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="root"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--sql的映射文件:resource为映射文件路径，可以有多个mapper-->
+        <!--        <mapper resource="com/itheima/mapper/UserMapper.xml"/>-->
+        <!--mapper代理方式-->
+        <!--包扫描：会将该目录下的所有xml映射文件加载进来-->
+        <package name="com.cqcqya.application.mapper"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cqcqya.application.mapper.UserMapper">
+    <!--1.根据邮箱查询-->
+    <select id="selectUserByMail" resultType="User">
+        select * from tb_user where mail = #{mail};
+    </select>
+    <!--2.根据联系方式查询-->
+    <select id="selectUserByTel" resultType="User">
+        select * from tb_user where tel = #{tel}
+    </select>
+    <!--3.创建用户-->
+    <insert id="createUser">
+        insert into tb_user(mail,tel,password) values(#{mail},#{tel},#{password})
+    </insert>
+</mapper>
